@@ -12,7 +12,7 @@ func TestTime(t *testing.T) {
 
 func TestDate(t *testing.T) {
 	tt := Time()
-	dd := Date(tt)
+	dd := Date("2006#01#02", tt)
 	t.Log(dd)
 }
 

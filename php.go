@@ -22,9 +22,9 @@ func Time() int64 {
 	return time.Now().Unix()
 }
 
-func Date(format ...string, timestamp int64) string {
+func Date(format string, timestamp int64) string {
 	if len(format) > 0 {
-		return time.Unix(timestamp, 0).Format(format[0])
+		return time.Unix(timestamp, 0).Format(format)
 	}
 
 	return time.Unix(timestamp, 0).Format(GO_TIME_LAYOUT)

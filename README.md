@@ -37,3 +37,35 @@
 * Url_decode => url_decode
 * Http_build_query => http_build_query
 * Uniqid => uniqid
+
+# 使用方法
+1. Go module
+
+    `require github.com/zhijianwu/php latest`
+
+    上面内容加入go.mod文件内
+
+    `go mod vendor`
+2. Go package
+
+    `go get -v github.com/zhijianwu/php`
+    
+3. Example
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/zhijianwu/php"
+)
+
+func main()  {
+	fmt.Println(php.Time())
+	fmt.Println(php.Date("2006~~~01#02",php.Time()))
+}
+
+//console
+1563257169
+2019~~~07#16
+```

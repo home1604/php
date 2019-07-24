@@ -1,7 +1,8 @@
-# PHP functions for Golang
-   golang使用的一些函数，这些函数很向php的函数
+# About
+   Those functions are like PHP's functions.
    
-# Go func => PHP function
+# Mapping
+   **Go func => PHP function**
 
 * Time => time
 * Date => date
@@ -31,7 +32,7 @@
 * Base64_decode => base64_decode
 * Addslashes => addslashes
 * Htmlentities => htmlentities
-* HtmlEntityDecode => html_entity_decode()
+* Html_entity_decode => html_entity_decode()
 * Crc32 => crc32
 * Url_encode => url_encode
 * Url_decode => url_decode
@@ -41,12 +42,10 @@
 * Is_file => is_file
 * Is_dir => is_dir
 
-# 使用方法
+# Usage
 1. Go module
 
     `require github.com/zhijianwu/php latest`
-
-    上面内容加入go.mod文件内
 
     `go mod vendor`
 2. Go package

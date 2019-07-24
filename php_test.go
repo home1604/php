@@ -171,3 +171,17 @@ func TestUniqid(t *testing.T) {
 	t.Log(Uniqid())
 	t.Log(Uniqid("uid_"))
 }
+
+func TestFile_exists(t *testing.T) {
+	t.Log(File_exists("php.go"))
+}
+
+func TestIs_file(t *testing.T) {
+	t.Error(Is_file("php.go"))
+	t.Error(Is_file("/Users/wuzhijian"))
+}
+
+func TestIs_dir(t *testing.T) {
+	t.Error(Is_dir("php.go"))
+	t.Error(Is_dir("/Users/wuzhijian"))
+}

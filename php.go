@@ -11,6 +11,7 @@ import (
 	"html"
 	"io/ioutil"
 	"net/url"
+	"os"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -274,4 +275,25 @@ func Uniqid(prefix ...string) string {
 
 	now := time.Now()
 	return fmt.Sprintf("%s%08x%05x", pre, now.Unix(), now.UnixNano()%0x100000)
+}
+
+func File_exists(filename string) bool {
+	_, err := os.Stat(filename)
+	return err == nil || os.IsExist(err)
+}
+
+func Is_file(path string) bool {
+	fi, e := os.Stat(path)
+	if e != nil {
+		return false
+	}
+	return !fi.IsDir()
+}
+
+func Is_dir(path string) bool {
+	fi, e := os.Stat(path)
+	if e != nil {
+		return false
+	}
+	return fi.IsDir()
 }

@@ -37,6 +37,9 @@
 * Url_decode => url_decode
 * Http_build_query => http_build_query
 * Uniqid => uniqid
+* File_exists => file_exists
+* Is_file => is_file
+* Is_dir => is_dir
 
 # 使用方法
 1. Go module

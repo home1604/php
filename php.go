@@ -297,3 +297,38 @@ func Is_dir(path string) bool {
 	}
 	return fi.IsDir()
 }
+
+func Array_keys(array map[string]interface{}) []string {
+	var key_array []string
+
+	for k, _ := range array {
+		key_array = append(key_array, k)
+	}
+
+	return key_array
+}
+
+func Array_values(array map[string]interface{}) []interface{} {
+	var value_array []interface{}
+
+	for _, v := range array {
+		value_array = append(value_array, v)
+	}
+
+	return value_array
+}
+
+func Array_column(array []map[string]interface{}, column string) []interface{} {
+	var column_array []interface{}
+	count := len(array)
+
+	for i := 0; i < count; i++ {
+		if v, ok := array[i][column]; ok {
+			column_array = append(column_array, v)
+		} else {
+			column_array = append(column_array, nil)
+		}
+	}
+
+	return column_array
+}

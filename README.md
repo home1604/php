@@ -41,6 +41,9 @@
 * File_exists => file_exists
 * Is_file => is_file
 * Is_dir => is_dir
+* Array_keys => array_keys
+* Array_values => array_values
+* Array_column => array_column
 
 # Usage
 1. Go module

@@ -185,3 +185,25 @@ func TestIs_dir(t *testing.T) {
 	t.Log(Is_dir("php.go"))
 	t.Log(Is_dir("/Users/wuzhijian"))
 }
+
+func TestArray_keys(t *testing.T) {
+	arr := map[string]interface{}{"name": "wzj", "age": "33", "height": 170, "weight": 59.2}
+	t.Log(Array_keys(arr))
+}
+
+func TestArray_values(t *testing.T) {
+	arr := map[string]interface{}{"name": "wzj", "age": "33", "height": 170, "weight": 59}
+	t.Log(Array_values(arr))
+}
+
+func TestArray_column(t *testing.T) {
+	arr := []map[string]interface{}{
+		{"name": "wzj", "age": "33", "height": 170, "weight": 59.2},
+		{"name": "wzj", "age": "33", "height": 180, "weight": 59.2},
+		{"name": "wzj", "age": "33", "height": 190, "weight": 59.2},
+		{"name": "wzj", "age": "33", "heights": 200, "weight": 59.2},
+		{"name": "wzj", "age": "33", "height": 200, "weight": 59.2},
+	}
+
+	t.Log(Array_column(arr, "height"))
+}

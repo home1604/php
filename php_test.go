@@ -45,8 +45,8 @@ func TestMb_strlen(t *testing.T) {
 }
 
 func TestStr_replace(t *testing.T) {
-	t.Log(Str_replace("hello", "HELLO", "hello world hello!", 1))
-	t.Log(Str_replace("hello", "HELLO", "hello world hello!"))
+	t.Log(Str_replace("hello", "111", "hello world hello!", 1))
+	t.Log(Str_replace("hello", "111", "hello world hello!"))
 }
 
 func TestStrtolower(t *testing.T) {
@@ -177,11 +177,11 @@ func TestFile_exists(t *testing.T) {
 }
 
 func TestIs_file(t *testing.T) {
-	t.Error(Is_file("php.go"))
-	t.Error(Is_file("/Users/wuzhijian"))
+	t.Log(Is_file("php.go"))
+	t.Log(Is_file("/Users/wuzhijian"))
 }
 
 func TestIs_dir(t *testing.T) {
-	t.Error(Is_dir("php.go"))
-	t.Error(Is_dir("/Users/wuzhijian"))
+	t.Log(Is_dir("php.go"))
+	t.Log(Is_dir("/Users/wuzhijian"))
 }

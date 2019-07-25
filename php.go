@@ -74,7 +74,7 @@ func Str_replace(search, replace, subject string, count ...int) string {
 		return strings.Replace(subject, search, replace, count[0])
 	}
 
-	return strings.ReplaceAll(subject, search, replace)
+	return strings.Replace(subject, search, replace, -1)
 }
 
 func Strtoupper(str string) string {
